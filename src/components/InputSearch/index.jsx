@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyledBoxInputSearch } from "./styled";
 import { Button } from "../Button";
-export function InputSearch({ setSearch }) {
+export function InputSearch({ setSearch, dataApi }) {
   const [inputValue, setInputValue] = useState("");
 
   function categorySearch() {

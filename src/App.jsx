@@ -11,23 +11,12 @@ export function App() {
   const [search, setSearch] = useState("all");
   const [listCart, setListCart] = useState([]);
 
-  function filterProduct() {
-    let filterExist = false;
-
-    dataApi.forEach((item) => {
-      if (item.category.toLowerCase() === search.toLowerCase()) {
-        filterExist = true;
-      }
-    });
-
-    return filterExist;
-  }
-
-  const arrayRender = filterProduct()
-    ? dataApi.filter((item) => {
-        return item.category.toLowerCase() === search.toLowerCase();
-      })
-    : [...dataApi];
+  const arrayRender =
+    search !== "all"
+      ? dataApi.filter((item) => {
+          return item.category.toLowerCase().includes(search.toLowerCase());
+        })
+      : [...dataApi];
 
   useEffect(() => {
     async function getDataApi() {
@@ -40,12 +29,14 @@ export function App() {
   return (
     <div>
       <GlobalStyle />
-      <Header setSearch={setSearch} />
+      <Header setSearch={setSearch} dataApi={dataApi} />
       <StyledContainer>
         <ListProducts
           arrayRender={arrayRender}
           listCart={listCart}
           setListCart={setListCart}
+          search={search}
+          setSearch={setSearch}
         />
         <Cart listCart={listCart} setListCart={setListCart} />
       </StyledContainer>

@@ -35,7 +35,7 @@ export const StyledContainer = styled.div`
     color: #eb5757;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1150px) {
     padding: 0 15px;
   }
 

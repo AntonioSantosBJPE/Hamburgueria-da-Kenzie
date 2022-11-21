@@ -11,8 +11,9 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 5%;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1150px) {
     flex-direction: column;
     gap: 20px;
 

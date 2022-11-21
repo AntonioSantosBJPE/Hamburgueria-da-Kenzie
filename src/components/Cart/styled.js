@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledBoxCart = styled.div`
-  width: 35%;
+  width: 30%;
   max-width: 380px;
   height: fit-content;
 
@@ -16,8 +16,10 @@ export const StyledBoxCart = styled.div`
     background: #27ae60;
     color: white;
   }
-
-  @media (max-width: 1023px) {
+  @media (max-width: 1439px) {
+    width: 40%;
+  }
+  @media (max-width: 1150px) {
     width: 100%;
   }
 `;
