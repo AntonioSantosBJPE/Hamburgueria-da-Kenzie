@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export function InputSearch({ setSearch, dataApi }) {
+export function InputSearch({ setSearch }) {
   const [inputValue, setInputValue] = useState("");
 
   function showToastErrorMessage() {

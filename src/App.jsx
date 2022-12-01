@@ -5,6 +5,8 @@ import { Api } from "./components/Api";
 import { Header } from "./components/Header";
 import { ListProducts } from "./components/ListProducts/index.jsx";
 import { Cart } from "./components/Cart";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export function App() {
   const [dataApi, setDataApi] = useState([]);
@@ -14,7 +16,10 @@ export function App() {
   const arrayRender =
     search !== "all"
       ? dataApi.filter((item) => {
-          return item.category.toLowerCase().includes(search.toLowerCase());
+          return (
+            item.category.toLowerCase().includes(search.toLowerCase()) ||
+            item.name.toLowerCase().includes(search.toLowerCase())
+          );
         })
       : [...dataApi];
 
@@ -28,8 +33,18 @@ export function App() {
 
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover={false}
+      />
       <GlobalStyle />
-      <Header setSearch={setSearch} dataApi={dataApi} />
+      <Header setSearch={setSearch} />
       <StyledContainer>
         <ListProducts
           arrayRender={arrayRender}

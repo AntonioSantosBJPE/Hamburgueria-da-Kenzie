@@ -1,25 +1,11 @@
 import { StyledCard, StyledBoxImg, StyledBoxInfos } from "./styled";
 import { Button } from "../../Button";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export function CardProducts({ product, listCart, setListCart }) {
   const { id, name, category, price, img } = product;
-
-  function showToastSuccessMessage() {
-    toast.success("Produto adicionado ao carrinho com sucesso !", {
-      position: toast.POSITION.TOP_CENTER,
-    });
-  }
-  function showToastErrorMessage() {
-    toast.error(
-      "Não é possível adicionar o mesmo produto mais de uma vez no carrinho !",
-      {
-        position: toast.POSITION.TOP_CENTER,
-      }
-    );
-  }
 
   function addItemCart(product) {
     const contains = listCart.includes(product);
@@ -28,15 +14,17 @@ export function CardProducts({ product, listCart, setListCart }) {
       setListCart((previousProduct) => {
         return [...previousProduct, product];
       });
-      showToastSuccessMessage();
+
+      toast.success("Produto adicionado ao carrinho com sucesso !");
     } else {
-      showToastErrorMessage();
+      toast.error(
+        "Não é possível adicionar o mesmo produto mais de uma vez no carrinho !"
+      );
     }
   }
 
   return (
     <StyledCard>
-      <ToastContainer />
       <StyledBoxImg>
         <img src={img} alt={`imagem ${name}`} />
       </StyledBoxImg>
