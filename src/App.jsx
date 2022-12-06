@@ -10,11 +10,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 export function App() {
   const [dataApi, setDataApi] = useState([]);
-  const [search, setSearch] = useState("all");
+  const [search, setSearch] = useState("");
   const [listCart, setListCart] = useState([]);
 
   const arrayRender =
-    search !== "all"
+    search !== ""
       ? dataApi.filter((item) => {
           return (
             item.category.toLowerCase().includes(search.toLowerCase()) ||

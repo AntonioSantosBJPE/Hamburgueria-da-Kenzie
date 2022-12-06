@@ -28,14 +28,14 @@ export function ListProducts({
 
   return (
     <StyledContainerList>
-      {search !== "all" && (
+      {search !== "" && (
         <StyledBoxResults>
           <h2>
             Resultados para: <span>{search}</span>
           </h2>
           <Button
             functionClick={() => {
-              setSearch("all");
+              setSearch("");
             }}
             name="Limpar busca"
             color="green"
