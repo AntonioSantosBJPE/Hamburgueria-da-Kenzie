@@ -7,7 +7,7 @@ A aplicação faz uso da api <a href="https://hamburgueria-kenzie-json-serve.her
  
 ## :books: Funcionalidades
 
-- <b>Funcionalidade Adicionar produto no carrinho</b>: O usuário pode adicionar um item do cardápio no carrinho de compras ;
+- <b>Funcionalidade Adicionar produto no carrinho</b>: O usuário pode adicionar um itens do cardápio no carrinho de compras ;
 - <b>Funcionalidade Filtrar produtos</b>: O usuário pode realizar um filtro nos produtos, através do campo de pesquisa localizado na parte superior da aplicação;
 - <b>Funcionalidade Remevor produto do carrinho</b>: O usuário pode remover os items que foram adicionados no carrinho de compras, de forma individual, ou todos de uma só vez;
 
