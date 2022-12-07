@@ -2,9 +2,8 @@
 
 ## :memo: Descrição
 
-O projeto Hamburgueria da Kenzie simula a página de pedidos de uma lanchonete , tornando possível adicionar e excluir itens no carrinho de compras, como também filtar os items do catálogo.
-A aplicação faz uso da api <a href="https://hamburgueria-kenzie-json-serve.herokuapp.com/products" target="_blank"> Burguer Kenzie</a> , de propriedade da Kenzie,e foi desenvolvida durante
-o terceiro módulo do curso de desenvolvimento fullstack da instituição.
+O projeto Hamburgueria da Kenzie simula a página de pedidos de uma lanchonete , tornando possível adicionar e excluir itens no carrinho de compras, como também filtrar os items do catálogo.
+A aplicação faz uso da api <a href="https://hamburgueria-kenzie-json-serve.herokuapp.com/products" target="_blank"> Burguer Kenzie</a> , de propriedade da Kenzie, e foi desenvolvida durante o terceiro módulo do curso de desenvolvimento fullstack da instituição.
  
 ## :books: Funcionalidades
 
@@ -24,7 +23,7 @@ o terceiro módulo do curso de desenvolvimento fullstack da instituição.
 
 ## :rocket: Rodando o projeto
 
-Para rodar o repositório é necessário clonar o mesmo, e dar o seguinte comando para iniciar o projeto:
+Para rodar o repositório é necessário clonar o mesmo, e dar os seguintes comandos para iniciar o projeto:
 
 ```
 git clone git@github.com:AntonioSantosBJPE/Hamburgueria-da-Kenzie.git
